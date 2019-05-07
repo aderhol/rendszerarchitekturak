@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Vivado v2017.4 (64-bit)
+# SW Build 2086221 on Fri Dec 15 20:55:39 MST 2017
+# IP Build 2085800 on Fri Dec 15 22:25:07 MST 2017
+# Start of session at: Tue May  7 16:28:44 2019
+# Process ID: 13208
+# Current directory: D:/BME/2018-19_II/Rendszerarchitekturak/GIT/APB_UART
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent3260 D:\BME\2018-19_II\Rendszerarchitekturak\GIT\APB_UART\APB_UART.xpr
+# Log file: D:/BME/2018-19_II/Rendszerarchitekturak/GIT/APB_UART/vivado.log
+# Journal file: D:/BME/2018-19_II/Rendszerarchitekturak/GIT/APB_UART\vivado.jou
+#-----------------------------------------------------------
+start_gui
