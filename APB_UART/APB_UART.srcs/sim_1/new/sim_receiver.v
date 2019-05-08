@@ -67,7 +67,7 @@ module sim_receiver(
         #10
         next <= 1'b0;
     end
-        
+    
     always #5
         clk = ~clk;
 endmodule

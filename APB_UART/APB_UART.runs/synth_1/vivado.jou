@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Vivado v2018.3 (64-bit)
+# SW Build 2405991 on Thu Dec  6 23:38:27 MST 2018
+# IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
+# Start of session at: Wed May  8 02:09:48 2019
+# Process ID: 8876
+# Current directory: D:/BME/2018-19_II/Rendszerarchitekturak/GIT/APB_UART/APB_UART.runs/synth_1
+# Command line: vivado.exe -log APB_UART.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source APB_UART.tcl
+# Log file: D:/BME/2018-19_II/Rendszerarchitekturak/GIT/APB_UART/APB_UART.runs/synth_1/APB_UART.vds
+# Journal file: D:/BME/2018-19_II/Rendszerarchitekturak/GIT/APB_UART/APB_UART.runs/synth_1\vivado.jou
+#-----------------------------------------------------------
+source APB_UART.tcl -notrace
