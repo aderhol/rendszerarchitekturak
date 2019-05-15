@@ -47,10 +47,10 @@ A perifériaillesztőt Xilinx Vivado használatával, Verilog nyelven valósítj
 \begin{enumerate}
 \item \textbf{0x00000000:} Konfigurációs regiszter
 \begin{enumerate}
-\item \textbf{[15:0]:} Baud rate (hányada a mintavétel órajelének, ami a busz órajel 16-oda)
+\item \textbf{[15:0]:} N ($baud = \frac{f_{clk}}{N*16}$)
 \item \textbf{[16]:} Magas: 8 bites átvitel, Alacsony: 7 bites átvitel
 \item \textbf{[17]:} Magas: 2 stop bit, Alacsony: 1 stop bit
-\item \textbf{[18]:} Periféria engedélyezése (aktív alacsony)
+\item \textbf{[18]:} Periféria engedélyezése (Magas: engedélyezve, Alacsony: tiltva)
 
 \end{enumerate}
 \item \textbf{0x00000004:} Státusz regiszter
@@ -158,7 +158,7 @@ A transmit modul egy állapotgép alapján működik. (\ref{fig:tx_state}. ábra
 \textit{Rst} jelre a modul \textit{0} állapotba kerül, ez az állapot jelenti az UART küldés felfüggesztését. Ha a FIFO nem üres, a kimeneti regiszterbe bekerül belőle egy adat (a \textit{nextD} jel kivesz a FIFO-ból egy elemet), és az állapotgép 1-es állapotba kerül. Az állapotok 1-től \textit{shiftDepth}-ig (ami a konfiguráció alapján a kimeneti regiszter adatmérete). Az utolsó bit után az állapotgép újraindul, ha a FIFO-ban van még adat, illetve 0-ás állapotba kerül, ha nincs. 0-ás állapotban a kimenet magasban van (nincs adat).
 
 \subsection{Receive modul}
-A fogadó modul egy hasonló állapotgéppel működik, mint a küldő, az állapotok itt is az egyes bitek helyét kódolják a byteon belül. A modul \textit{SClk} órajellel vesz mintát az UART bemenetről, ez az órajel a beállított baud rate 1/16 része lesz. Az állapotgép kezdő állapota a 0, ez jelenti, hogy a fogadó a start bitre vár. Ekkor alacsony jel észlelésekor vár fél bitidőt, és ha még mindig alacsony, akkor elindul az állapotgép, és a konfigurációnak megfelelően beolvassa a byteot. A \textit{shMem} regiszterbe a bemenet egy többségi szavazással (\ref{fig:voter}. ábra) beolvasott értéke kerül, a bitidő közepéről mintavételezve.
+A fogadó modul egy hasonló állapotgéppel működik, mint a küldő, az állapotok itt is az egyes bitek helyét kódolják a byteon belül. A modul \textit{SClk} órajellel vesz mintát az UART bemenetről, ez az órajel az APB órajel N-ed része (ld. konfigurációs regiszter), a baud rate 16-szorosa. Az állapotgép kezdő állapota a 0, ez jelenti, hogy a fogadó a start bitre vár. Ekkor alacsony jel észlelésekor vár fél bitidőt, és ha a jel ezalatt mindvégig alacsony, akkor elindul az állapotgép, és a konfigurációnak megfelelően beolvassa a byteot. A \textit{shMem} regiszterbe a bemenet egy többségi szavazással (\ref{fig:voter}. ábra) beolvasott értéke kerül, a bitidő közepéről mintavételezve.
 
 \begin{figure}[h]
 \vspace{0.5cm}
