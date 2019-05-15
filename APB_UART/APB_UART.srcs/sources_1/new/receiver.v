@@ -71,7 +71,7 @@ module receiver(
                 if(sample == 1'b1)
                     state <= 4'd0;
                 else begin
-                    if(cnt == 7) begin //if the start condition lasted for half a bit time
+                    if(cnt == 8) begin //if the start condition lasted for half a bit time + 1 sample (so that subsequent bits will be sampled at the middle)
                         cnt <= 4'd0;
                         state <= state + 1;
                     end
