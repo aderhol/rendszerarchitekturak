@@ -169,7 +169,19 @@ A transmit modul egy állapotgép alapján működik. (\ref{fig:tx_state}. ábra
 
 \clearpage
 \subsection{Receive modul}
-A fogadó modul egy hasonló állapotgéppel működik, mint a küldő, az állapotok itt is az egyes bitek helyét kódolják a byteon belül. A modul \textit{SClk} órajellel vesz mintát az UART bemenetről, ez az órajel az APB órajel N-ed része (ld. konfigurációs regiszter), a baud rate 16-szorosa. Az állapotgép kezdő állapota a 0, ez jelenti, hogy a fogadó a start bitre vár. Ekkor alacsony jel észlelésekor vár fél bitidőt, és ha a jel ezalatt mindvégig alacsony, akkor elindul az állapotgép, és a konfigurációnak megfelelően beolvassa a byteot. A \textit{shMem} regiszterbe a bemenet egy többségi szavazással (\ref{fig:voter}. ábra) beolvasott értéke kerül, a bitidő közepéről mintavételezve.
+A fogadó modul egy hasonló állapotgéppel (\ref{fig:rx_state}. ábra) működik, mint a küldő, az állapotok itt is az egyes bitek helyét kódolják a byteon belül. A modul \textit{SClk} órajellel vesz mintát az UART bemenetről, ez az órajel az APB órajel N-ed része (ld. konfigurációs regiszter), a baud rate 16-szorosa. 
+
+\begin{figure}[h]
+\vspace{0.5cm}
+\begin{center}
+\includegraphics{figures/rx_state.eps}
+\caption{A fogadó modul állapotgépe}
+\label{fig:rx_state}
+\end{center}
+\vspace{0.5cm}
+\end{figure}
+
+Az állapotgép kezdő állapota a 0, ez jelenti, hogy a fogadó a start bitre vár. Ekkor alacsony jel észlelésekor vár fél bitidőt, és ha a jel ezalatt mindvégig alacsony, akkor elindul az állapotgép, és a konfigurációnak megfelelően beolvassa a byteot. A \textit{shMem} regiszterbe a bemenet egy többségi szavazással (\ref{fig:voter}. ábra) beolvasott értéke kerül, a bitidő közepéről mintavételezve.
 
 \begin{figure}[h]
 \vspace{0.5cm}
