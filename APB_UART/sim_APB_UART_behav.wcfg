@@ -11,52 +11,251 @@
       </db_ref>
    </db_ref_list>
    <zoom_setting>
-      <ZoomStartTime time="0fs"></ZoomStartTime>
-      <ZoomEndTime time="6540000001fs"></ZoomEndTime>
-      <Cursor1Time time="7085000000fs"></Cursor1Time>
+      <ZoomStartTime time="7058008334fs"></ZoomStartTime>
+      <ZoomEndTime time="7121958335fs"></ZoomEndTime>
+      <Cursor1Time time="7066000000fs"></Cursor1Time>
    </zoom_setting>
    <column_width_setting>
       <NameColumnWidth column_width="175"></NameColumnWidth>
-      <ValueColumnWidth column_width="146"></ValueColumnWidth>
+      <ValueColumnWidth column_width="142"></ValueColumnWidth>
    </column_width_setting>
-   <WVObjectSize size="9" />
-   <wvobject fp_name="/sim_APB_UART/rst" type="logic">
-      <obj_property name="ElementShortName">rst</obj_property>
-      <obj_property name="ObjectShortName">rst</obj_property>
-   </wvobject>
-   <wvobject fp_name="/sim_APB_UART/clk" type="logic">
-      <obj_property name="ElementShortName">clk</obj_property>
-      <obj_property name="ObjectShortName">clk</obj_property>
-   </wvobject>
-   <wvobject fp_name="/sim_APB_UART/PADDR" type="array">
-      <obj_property name="ElementShortName">PADDR[31:0]</obj_property>
-      <obj_property name="ObjectShortName">PADDR[31:0]</obj_property>
-      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
-   </wvobject>
-   <wvobject fp_name="/sim_APB_UART/PWRITE" type="logic">
-      <obj_property name="ElementShortName">PWRITE</obj_property>
-      <obj_property name="ObjectShortName">PWRITE</obj_property>
-   </wvobject>
-   <wvobject fp_name="/sim_APB_UART/PSEL" type="logic">
-      <obj_property name="ElementShortName">PSEL</obj_property>
-      <obj_property name="ObjectShortName">PSEL</obj_property>
-   </wvobject>
-   <wvobject fp_name="/sim_APB_UART/PENABLE" type="logic">
-      <obj_property name="ElementShortName">PENABLE</obj_property>
-      <obj_property name="ObjectShortName">PENABLE</obj_property>
-   </wvobject>
-   <wvobject fp_name="/sim_APB_UART/PWDATA" type="array">
-      <obj_property name="ElementShortName">PWDATA[31:0]</obj_property>
-      <obj_property name="ObjectShortName">PWDATA[31:0]</obj_property>
-      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
-   </wvobject>
-   <wvobject fp_name="/sim_APB_UART/PRDATA" type="array">
-      <obj_property name="ElementShortName">PRDATA[31:0]</obj_property>
-      <obj_property name="ObjectShortName">PRDATA[31:0]</obj_property>
-      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   <WVObjectSize size="4" />
+   <wvobject fp_name="group13" type="group">
+      <obj_property name="label">APB</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="isExpanded"></obj_property>
+      <wvobject fp_name="/sim_APB_UART/uut/PRESETn" type="logic">
+         <obj_property name="ElementShortName">PRESETn</obj_property>
+         <obj_property name="ObjectShortName">PRESETn</obj_property>
+      </wvobject>
+      <wvobject fp_name="/sim_APB_UART/uut/PCLK" type="logic">
+         <obj_property name="ElementShortName">PCLK</obj_property>
+         <obj_property name="ObjectShortName">PCLK</obj_property>
+      </wvobject>
+      <wvobject fp_name="/sim_APB_UART/PADDR" type="array">
+         <obj_property name="ElementShortName">PADDR[31:0]</obj_property>
+         <obj_property name="ObjectShortName">PADDR[31:0]</obj_property>
+         <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+      </wvobject>
+      <wvobject fp_name="/sim_APB_UART/PWRITE" type="logic">
+         <obj_property name="ElementShortName">PWRITE</obj_property>
+         <obj_property name="ObjectShortName">PWRITE</obj_property>
+      </wvobject>
+      <wvobject fp_name="/sim_APB_UART/PSEL" type="logic">
+         <obj_property name="ElementShortName">PSEL</obj_property>
+         <obj_property name="ObjectShortName">PSEL</obj_property>
+      </wvobject>
+      <wvobject fp_name="/sim_APB_UART/PENABLE" type="logic">
+         <obj_property name="ElementShortName">PENABLE</obj_property>
+         <obj_property name="ObjectShortName">PENABLE</obj_property>
+      </wvobject>
+      <wvobject fp_name="/sim_APB_UART/uut/PREADY" type="logic">
+         <obj_property name="ElementShortName">PREADY</obj_property>
+         <obj_property name="ObjectShortName">PREADY</obj_property>
+      </wvobject>
+      <wvobject fp_name="/sim_APB_UART/PWDATA" type="array">
+         <obj_property name="ElementShortName">PWDATA[31:0]</obj_property>
+         <obj_property name="ObjectShortName">PWDATA[31:0]</obj_property>
+         <obj_property name="Radix">HEXRADIX</obj_property>
+      </wvobject>
+      <wvobject fp_name="/sim_APB_UART/PRDATA" type="array">
+         <obj_property name="ElementShortName">PRDATA[31:0]</obj_property>
+         <obj_property name="ObjectShortName">PRDATA[31:0]</obj_property>
+         <obj_property name="Radix">HEXRADIX</obj_property>
+      </wvobject>
    </wvobject>
    <wvobject fp_name="/sim_APB_UART/line" type="logic">
+      <obj_property name="DisplayName">label</obj_property>
       <obj_property name="ElementShortName">line</obj_property>
       <obj_property name="ObjectShortName">line</obj_property>
+      <obj_property name="label">line (Tx -&gt; Rx)</obj_property>
+      <obj_property name="CustomSignalColor">#0000FF</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+   </wvobject>
+   <wvobject fp_name="group44" type="group">
+      <obj_property name="label">Receiver</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="isExpanded"></obj_property>
+      <wvobject fp_name="/sim_APB_UART/uut/rec/rst" type="logic">
+         <obj_property name="ElementShortName">rst</obj_property>
+         <obj_property name="ObjectShortName">rst</obj_property>
+      </wvobject>
+      <wvobject fp_name="/sim_APB_UART/uut/rec/clk" type="logic">
+         <obj_property name="ElementShortName">clk</obj_property>
+         <obj_property name="ObjectShortName">clk</obj_property>
+      </wvobject>
+      <wvobject fp_name="/sim_APB_UART/uut/rec/eight_bit" type="logic">
+         <obj_property name="ElementShortName">eight_bit</obj_property>
+         <obj_property name="ObjectShortName">eight_bit</obj_property>
+      </wvobject>
+      <wvobject fp_name="/sim_APB_UART/uut/rec/N" type="array">
+         <obj_property name="ElementShortName">N[15:0]</obj_property>
+         <obj_property name="ObjectShortName">N[15:0]</obj_property>
+         <obj_property name="Radix">HEXRADIX</obj_property>
+      </wvobject>
+      <wvobject fp_name="group66" type="group">
+         <obj_property name="label">FIFO in</obj_property>
+         <obj_property name="DisplayName">label</obj_property>
+         <obj_property name="isExpanded"></obj_property>
+         <wvobject fp_name="/sim_APB_UART/uut/rec/rec" type="logic">
+            <obj_property name="ElementShortName">rec</obj_property>
+            <obj_property name="ObjectShortName">rec</obj_property>
+         </wvobject>
+         <wvobject fp_name="/sim_APB_UART/uut/rec/shMem" type="array">
+            <obj_property name="ElementShortName">shMem[7:0]</obj_property>
+            <obj_property name="ObjectShortName">shMem[7:0]</obj_property>
+            <obj_property name="Radix">HEXRADIX</obj_property>
+         </wvobject>
+      </wvobject>
+      <wvobject fp_name="group76" type="group">
+         <obj_property name="label">FIFO out</obj_property>
+         <obj_property name="DisplayName">label</obj_property>
+         <obj_property name="isExpanded"></obj_property>
+         <wvobject fp_name="/sim_APB_UART/uut/rec/next" type="logic">
+            <obj_property name="ElementShortName">next</obj_property>
+            <obj_property name="ObjectShortName">next</obj_property>
+         </wvobject>
+         <wvobject fp_name="/sim_APB_UART/uut/rec/data" type="array">
+            <obj_property name="ElementShortName">data[7:0]</obj_property>
+            <obj_property name="ObjectShortName">data[7:0]</obj_property>
+            <obj_property name="Radix">HEXRADIX</obj_property>
+         </wvobject>
+      </wvobject>
+      <wvobject fp_name="/sim_APB_UART/uut/rec/empty" type="logic">
+         <obj_property name="ElementShortName">empty</obj_property>
+         <obj_property name="ObjectShortName">empty</obj_property>
+      </wvobject>
+      <wvobject fp_name="/sim_APB_UART/uut/rec/full" type="logic">
+         <obj_property name="ElementShortName">full</obj_property>
+         <obj_property name="ObjectShortName">full</obj_property>
+      </wvobject>
+      <wvobject fp_name="/sim_APB_UART/uut/rec/SClk" type="logic">
+         <obj_property name="ElementShortName">SClk</obj_property>
+         <obj_property name="ObjectShortName">SClk</obj_property>
+      </wvobject>
+      <wvobject fp_name="/sim_APB_UART/uut/rec/sample" type="logic">
+         <obj_property name="ElementShortName">sample</obj_property>
+         <obj_property name="ObjectShortName">sample</obj_property>
+         <obj_property name="CustomSignalColor">#00FFFF</obj_property>
+         <obj_property name="UseCustomSignalColor">true</obj_property>
+      </wvobject>
+      <wvobject fp_name="group84" type="group">
+         <obj_property name="label">Majority Decision</obj_property>
+         <obj_property name="DisplayName">label</obj_property>
+         <obj_property name="isExpanded"></obj_property>
+         <wvobject fp_name="/sim_APB_UART/uut/rec/buff" type="array">
+            <obj_property name="ElementShortName">buff[1:0]</obj_property>
+            <obj_property name="ObjectShortName">buff[1:0]</obj_property>
+            <obj_property name="Radix">BINARYRADIX</obj_property>
+         </wvobject>
+         <wvobject fp_name="/sim_APB_UART/uut/rec/dec" type="logic">
+            <obj_property name="ElementShortName">dec</obj_property>
+            <obj_property name="ObjectShortName">dec</obj_property>
+         </wvobject>
+      </wvobject>
+      <wvobject fp_name="group87" type="group">
+         <obj_property name="label">State Machine</obj_property>
+         <obj_property name="DisplayName">label</obj_property>
+         <obj_property name="isExpanded"></obj_property>
+         <wvobject fp_name="/sim_APB_UART/uut/rec/cnt" type="array">
+            <obj_property name="ElementShortName">cnt[3:0]</obj_property>
+            <obj_property name="ObjectShortName">cnt[3:0]</obj_property>
+            <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+         </wvobject>
+         <wvobject fp_name="/sim_APB_UART/uut/rec/state" type="array">
+            <obj_property name="ElementShortName">state[3:0]</obj_property>
+            <obj_property name="ObjectShortName">state[3:0]</obj_property>
+            <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+         </wvobject>
+         <wvobject fp_name="/sim_APB_UART/uut/rec/shMem" type="array">
+            <obj_property name="ElementShortName">shMem[7:0]</obj_property>
+            <obj_property name="ObjectShortName">shMem[7:0]</obj_property>
+            <obj_property name="Radix">BINARYRADIX</obj_property>
+         </wvobject>
+      </wvobject>
+   </wvobject>
+   <wvobject fp_name="group14" type="group">
+      <obj_property name="label">Transmitter</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <wvobject fp_name="/sim_APB_UART/uut/tr/rst" type="logic">
+         <obj_property name="ElementShortName">rst</obj_property>
+         <obj_property name="ObjectShortName">rst</obj_property>
+      </wvobject>
+      <wvobject fp_name="/sim_APB_UART/uut/tr/clk" type="logic">
+         <obj_property name="ElementShortName">clk</obj_property>
+         <obj_property name="ObjectShortName">clk</obj_property>
+      </wvobject>
+      <wvobject fp_name="/sim_APB_UART/uut/tr/two_stop" type="logic">
+         <obj_property name="ElementShortName">two_stop</obj_property>
+         <obj_property name="ObjectShortName">two_stop</obj_property>
+      </wvobject>
+      <wvobject fp_name="/sim_APB_UART/uut/tr/eight_bit" type="logic">
+         <obj_property name="ElementShortName">eight_bit</obj_property>
+         <obj_property name="ObjectShortName">eight_bit</obj_property>
+      </wvobject>
+      <wvobject fp_name="/sim_APB_UART/uut/tr/N" type="array">
+         <obj_property name="ElementShortName">N[15:0]</obj_property>
+         <obj_property name="ObjectShortName">N[15:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="group23" type="group">
+         <obj_property name="label">FIFO in</obj_property>
+         <obj_property name="DisplayName">label</obj_property>
+         <obj_property name="isExpanded"></obj_property>
+         <wvobject fp_name="/sim_APB_UART/uut/tr/next" type="logic">
+            <obj_property name="ElementShortName">next</obj_property>
+            <obj_property name="ObjectShortName">next</obj_property>
+         </wvobject>
+         <wvobject fp_name="/sim_APB_UART/uut/tr/data" type="array">
+            <obj_property name="ElementShortName">data[7:0]</obj_property>
+            <obj_property name="ObjectShortName">data[7:0]</obj_property>
+            <obj_property name="Radix">HEXRADIX</obj_property>
+         </wvobject>
+      </wvobject>
+      <wvobject fp_name="group26" type="group">
+         <obj_property name="label">FIFO out</obj_property>
+         <obj_property name="DisplayName">label</obj_property>
+         <obj_property name="isExpanded"></obj_property>
+         <wvobject fp_name="/sim_APB_UART/uut/tr/nextD" type="logic">
+            <obj_property name="ElementShortName">nextD</obj_property>
+            <obj_property name="ObjectShortName">nextD</obj_property>
+         </wvobject>
+         <wvobject fp_name="/sim_APB_UART/uut/tr/D" type="array">
+            <obj_property name="ElementShortName">D[7:0]</obj_property>
+            <obj_property name="ObjectShortName">D[7:0]</obj_property>
+            <obj_property name="Radix">HEXRADIX</obj_property>
+         </wvobject>
+      </wvobject>
+      <wvobject fp_name="/sim_APB_UART/uut/tr/empty" type="logic">
+         <obj_property name="ElementShortName">empty</obj_property>
+         <obj_property name="ObjectShortName">empty</obj_property>
+      </wvobject>
+      <wvobject fp_name="/sim_APB_UART/uut/tr/full" type="logic">
+         <obj_property name="ElementShortName">full</obj_property>
+         <obj_property name="ObjectShortName">full</obj_property>
+      </wvobject>
+      <wvobject fp_name="group27" type="group">
+         <obj_property name="label">State Machine</obj_property>
+         <obj_property name="DisplayName">label</obj_property>
+         <obj_property name="isExpanded"></obj_property>
+         <wvobject fp_name="/sim_APB_UART/uut/tr/BCount" type="array">
+            <obj_property name="ElementShortName">BCount[19:0]</obj_property>
+            <obj_property name="ObjectShortName">BCount[19:0]</obj_property>
+            <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+         </wvobject>
+         <wvobject fp_name="/sim_APB_UART/uut/tr/nextState" type="logic">
+            <obj_property name="ElementShortName">nextState</obj_property>
+            <obj_property name="ObjectShortName">nextState</obj_property>
+         </wvobject>
+         <wvobject fp_name="/sim_APB_UART/uut/tr/state" type="array">
+            <obj_property name="ElementShortName">state[3:0]</obj_property>
+            <obj_property name="ObjectShortName">state[3:0]</obj_property>
+            <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+         </wvobject>
+      </wvobject>
+      <wvobject fp_name="/sim_APB_UART/uut/tr/shMem" type="array">
+         <obj_property name="ElementShortName">shMem[10:0]</obj_property>
+         <obj_property name="ObjectShortName">shMem[10:0]</obj_property>
+         <obj_property name="Radix">BINARYRADIX</obj_property>
+      </wvobject>
    </wvobject>
 </wave_config>
